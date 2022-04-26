@@ -218,7 +218,7 @@ body.active { overflow: hidden; }
   color: var(--black);
 }
 
-.btn-secondary:is(:hover, :focus) { --raw-seinna: hsl(24, 74%, 64%); }
+.btn-secondary:is(:hover, :focus) { --raw-seinna: hsl(118, 74%, 64%); }
 
 .section-subtitle {
   position: relative;
@@ -434,7 +434,7 @@ body.active { overflow: hidden; }
 .navbar-link::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 80%;
   transform: translateY(-50%);
   left: 0;
   height: 5px;
