@@ -8,8 +8,8 @@ if ( isset( $_POST['url'] ) ) {
 		include('MailChimp.php');
 
 		// MailChimp API credentials
-		$list_id     = '7d73f93b10';
-		$api_key     = 'c9a2d74ee39c18ea82584ad972bb66b3-us15';
+		$list_id     = 'a59092d10f';
+		$api_key     = '2b8136a03ffbc6bfd1963481f62bd68d-us10';
 		$doubleOptIn = true;
 
 		//CONFIGURE VARIABLES START.

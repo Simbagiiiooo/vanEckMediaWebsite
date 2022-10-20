@@ -7,7 +7,7 @@ if(isset($_POST["action"])) {
 	$headers = 'From: Demo Contact Form <demo@domain.com>' . "\r\n";
 
 	$to = 'demo@domain.com';     // Recipient's email address
-	$subject = 'Message from Webster Contact Demo '; // Message title
+	$subject = 'Message from van Eck Media website '; // Message title
 
 	$body = " From: $name \n E-Mail: $email \n Phone : $phone \n Message : $message"  ;
 	
@@ -61,7 +61,7 @@ if(isset($_POST["action"])) {
 function validation_google_captcha( $captch_response){
 
 	/* Replace google captcha secret key*/
-	$captch_secret_key = 'Add your secret key here';
+	$captch_secret_key = '6LdvXZciAAAAAChpQ7nQg9MdCe7QC64Ax_8jrET1';
 	
 	$data = array(
             'secret'   => $captch_secret_key,
