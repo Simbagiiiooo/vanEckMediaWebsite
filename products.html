@@ -62,7 +62,7 @@
         <div class="col-lg-6 col-md-6 xs-mb-10">
           <div class="topbar-call text-center text-md-start">
             <ul>
-              <li><i class="fa fa-envelope-o theme-color"></i> ralf.v.eck@gmail.com</li>
+              <li><i class="fa fa-envelope-o theme-color"></i> info@vaneckmedia.nl</li>
             </ul>
           </div>
         </div>
@@ -164,7 +164,7 @@ shop -->
 
 
 <section class="shop grid page-section-ptb" id="products">
-  <div class="container">
+  <div class="container" id="basic">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="section-title text-center">
@@ -182,9 +182,9 @@ shop -->
             <h5 class="mb-20">categories</h5>
             <div class="widget-link">
               <ul>
-                <li> <a href="#"> <i class="fa fa-angle-double-right"></i> Basic </a></li>
+                <li> <a href="#basic"> <i class="fa fa-angle-double-right"></i> Basic </a></li>
                 <li> <a href="#standaard"> <i class="fa fa-angle-double-right"></i> Standaard </a> </li>
-                <li> <a href="#premium"  id="basic"> <i class="fa fa-angle-double-right"></i> Premium </a> </li>
+                <li> <a href="#premium"> <i class="fa fa-angle-double-right"></i> Premium </a> </li>
               </ul>
             </div>
           </div>
@@ -198,10 +198,10 @@ shop -->
                 <img class="img-fluid mx-auto" src="images/shop/01.jpg" alt="">
               </div>
             </div>
-            <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="col-lg-8 col-md-8 col-sm-8" >
               <div class="product-des text-start">
                 <div class="product-title">
-                  <a href="shop-single.html">Product name</a>
+                  <a href="shop-single.html">Basic 1</a>
                 </div>
                 <div class="product-rating">
                   <i class="fa fa-star"></i>
@@ -211,13 +211,13 @@ shop -->
                   <i class="fa fa-star-o"></i>
                 </div>
                 <div class="product-price">
-                  <del>$24.99</del> <ins>$12.49</ins>
+                  <del>€39 / maand</del> <ins>€29 / maand</ins>
                 </div>
                 <div class="product-info mt-20">
                   <p>Minus nemo fugit lorem ipsum dolor sit amet, consectetur adipisicing elit. expedita aliquam ducimus
                     nostrum voluptatibus veniam est magni non! Mollitia nemo assumenda perspiciatis! Totam eum laboriosam
                     possimus saepe facere.</p>
-                  <a class="button small mt-20"  id="standaard" href="shop-single.html">add to cart</a>
+                  <a class="button small mt-20"  id="standaard" href="shop-single.html">Bekijk live</a>
                 </div>
               </div>
             </div>
@@ -234,7 +234,7 @@ shop -->
             <div class="col-lg-8 col-md-8 col-sm-8">
               <div class="product-des text-start">
                 <div class="product-title">
-                  <a href="shop-single.html">Product name</a>
+                  <a href="shop-single.html">Standard 1</a>
                 </div>
                 <div class="product-rating">
                   <i class="fa fa-star"></i>
@@ -244,13 +244,13 @@ shop -->
                   <i class="fa fa-star-o"></i>
                 </div>
                 <div class="product-price">
-                  <del>$24.99</del> <ins>$12.49</ins>
+                  <del>€69 / maand</del> <ins>€49 / maand</ins>
                 </div>
                 <div class="product-info mt-20">
                   <p>Consectetur adipisicing lorem ipsum dolor sit amet, elit. Minus nemo fugit expedita aliquam ducimus
                     nostrum voluptatibus veniam est magni non! Mollitia nemo assumenda perspiciatis! Totam eum laboriosam
                     possimus saepe facere.</p>
-                  <a class="button small mt-20" id="premium" href="shop-single.html">add to cart</a>
+                  <a class="button small mt-20" id="premium" href="shop-single.html">Bekijk live</a>
                 </div>
               </div>
             </div>
@@ -264,10 +264,10 @@ shop -->
                 <img class="img-fluid mx-auto" src="images/shop/03.jpg" alt="">
               </div>
             </div>
-            <div class="col-lg-8 col-md-8 col-sm-8">
+            <div class="col-lg-8 col-md-8 col-sm-8" id="premium">
               <div class="product-des text-start">
                 <div class="product-title">
-                  <a href="shop-single.html">Product name</a>
+                  <a href="shop-single.html">Premium 1</a>
                 </div>
                 <div class="product-rating">
                   <i class="fa fa-star"></i>
@@ -277,13 +277,13 @@ shop -->
                   <i class="fa fa-star-o"></i>
                 </div>
                 <div class="product-price">
-                  <del>$24.99</del> <ins>$12.49</ins>
+                  <del>€99 / maand</del> <ins>€69 / maand</ins>
                 </div>
                 <div class="product-info mt-20">
                   <p>Expedita aliquam ducimus lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nemo fugit
                     nostrum voluptatibus veniam est magni non! Mollitia nemo assumenda perspiciatis! Totam eum laboriosam
                     possimus saepe facere.</p>
-                  <a class="button small mt-20" href="shop-single.html">add to cart</a>
+                  <a class="button small mt-20" href="shop-single.html">Bekijk live</a>
                 </div>
               </div>
             </div>
@@ -318,10 +318,11 @@ shop -->
                      <div class="pricing-top">
                        <div class="pricing-title">
                          <h3 class="mb-15">Basic </h3>
-                         <p>In this package dolor sit amet occaecat cupidatat non proident</p>
                        </div>
                        <div class="pricing-prize">
-                         <h2>€29 /<span> month</span> </h2>
+                         <h2>€29 /<span> maand</span> </h2>
+                        <p>of met <span style="color: red; font-weight: 900; font-size: x-large; text-decoration: underline;">10%</span> korting</p>
+                        <h2>€313 /<span> jaar</span> </h2>
                        </div>
                        <div class="pricing-button">
                          <a class="button" href="#contact">designs</a>
@@ -336,10 +337,10 @@ shop -->
                                   title="Domeinnaamregistratie voor één .nl of .be domeinnaam of tegen meerprijs andere domeinnament"><i class="fa fa-info"></i></span> </li>
                                 <li><i class="fa fa-check"></i> 1 uur p/m <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
                                   title="Dit is voor veranderen van de content op je bestaande website, na 1 uur €25 p/u"><i class="fa fa-info"></i></span> </li>
-                                <li> <i class="fa fa-times"></i> 4 Social Account <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
-                                  title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-                                <li> <i class="fa fa-times"></i>  Phone & Email Support <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
-                                  title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
+                                <li> <i class="fa fa-times"></i> mailboxen <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
+                                  title="Dit basic abonnement is zonder mailboxen"><i class="fa fa-info"></i></span> </li>
+                                <li> <i class="fa fa-check"></i> Telefoon & Email Support <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
+                                  title="telefonisch en email support zie contact gegevens"><i class="fa fa-info"></i></span> </li>
                             </ul>
                         </div>
                      </div>
@@ -350,10 +351,11 @@ shop -->
                      <div class="pricing-top">
                        <div class="pricing-title">
                          <h3 class="mb-15">Standard</h3>
-                         <p>Suitable for medium sit amet officia deserunt mollit anim id est laborum</p>
                        </div>
                        <div class="pricing-prize">
-                         <h2>€49 /<span> month</span> </h2>
+                         <h2>€49 /<span> maand</span> </h2>
+                         <p>of met <span style="color: red; font-weight: 900; font-size: x-large; text-decoration: underline;">10%</span> korting</p>
+                        <h2>€530 /<span> jaar</span> </h2>
                        </div>
                        <div class="pricing-button">
                          <a class="button" href="#contact">designs</a>
@@ -368,10 +370,10 @@ shop -->
                                   title="Domeinnaamregistratie voor één .nl of .be domeinnaam of tegen meerprijs andere domeinnamen"><i class="fa fa-info"></i></span> </li>
                                 <li><i class="fa fa-check"></i> 1,75 uur p/m <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
                                   title="Dit is voor veranderen van de content op je bestaande website, na 1,75 uur 25€ p/u"><i class="fa fa-info"></i></span> </li>
-                                <li> <i class="fa fa-check"></i> 4 Social Account <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
-                                  title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-                                <li> <i class="fa fa-check"></i>  Phone & Email Support <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
-                                  title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
+                                <li> <i class="fa fa-check"></i> 3 mailboxen <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
+                                  title="In dit standard abonnement zitten 3 mailboxen "><i class="fa fa-info"></i></span> </li>
+                                <li> <i class="fa fa-check"></i> Telefoon & Email Support <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
+                                  title="telefonisch en email support zie contact gegevens"><i class="fa fa-info"></i></span> </li>
                             </ul>
                         </div>
                      </div>
@@ -382,10 +384,11 @@ shop -->
                      <div class="pricing-top">
                        <div class="pricing-title">
                          <h3 class="mb-15">Premium</h3>
-                         <p>Best for unlimited tempor incididunt ut labore et dolore magna aliqua</p>
                        </div>
                        <div class="pricing-prize">
-                         <h2>€69 /<span> month</span> </h2>
+                         <h2>€69 /<span> maand</span> </h2>
+                        <p>of met <span style="color: red; font-weight: 900; font-size: x-large; text-decoration: underline;">10%</span> korting</p>
+                         <h2>€745 /<span> jaar</span> </h2>
                        </div>
                        <div class="pricing-button">
                          <a class="button" href="#contact">designs</a>
@@ -396,14 +399,14 @@ shop -->
                             <ul class="list-unstyled">
                                 <li> <i class="fa fa-check"></i> Premium design <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
                                   title="Keuze uit premium design"><i class="fa fa-info"></i></span></li>
-                                <li><i class="fa fa-times"></i> Domeinnaamregistratie <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
+                                <li><i class="fa fa-check"></i> Domeinnaamregistratie <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
                                   title="Domeinnaamregistratie voor één .nl of .be domeinnaam of tegen meerprijs andere domeinnamen"><i class="fa fa-info"></i></span> </li>
                                 <li><i class="fa fa-check"></i> 2,5 uur p/m <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
                                   title="Dit is voor veranderen van de content op je bestaande website, na 2,5 uur 25€ p/u"><i class="fa fa-info"></i></span> </li>
-                                <li> <i class="fa fa-times"></i> 4 Social Account <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
-                                  title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-                                <li> <i class="fa fa-check"></i>  Phone & Email Support <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
-                                  title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
+                                <li> <i class="fa fa-check"></i> 5 mailboxen <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
+                                  title="In dit premium abonnement zitten 5 mailboxen"><i class="fa fa-info"></i></span> </li>
+                                <li> <i class="fa fa-check"></i>  Telefoon & Email Support <span class="tooltip-content float-end" data-bs-placement="top" data-bs-toggle="tooltip"
+                                  title="telefonisch en email support zie contact gegevens"><i class="fa fa-info"></i></span> </li>
                             </ul>
                         </div>
                     </div>
@@ -475,7 +478,7 @@ shop -->
             </div>
             <div class="process-info">
               <h5 class="mb-20"> INRICHTEN VAN JOUW WEBSITE</h5>
-              <p>Na de video call of bel afspraak gaan wij direct voor je aan de slag. We gaan je domein registreren, je e-mailboxen aanmaken, je website
+              <p>Na de video call of bel afspraak gaan wij direct voor je aan de slag. We gaan je domein registreren, je e-mailbox(en) aanmaken, je website
               opbouwen en vervolgens jouw huisstijl doorvoeren in het design.</p>
               <p>Zodra wij dit allemaal hebben gedaan ontvang je een bericht met de gegevens om jouw website te beoordelen.</p>
             </div>
@@ -511,7 +514,7 @@ shop -->
             </div>
             <div class="process-info">
               <h5 class="mb-20"> WEBSITE LANCERING</h5>
-              <p>Als alle teksten en afbeeldingen naar jou tevredenheid op de website staan, gaan wij heb binnen 2 uur online zetten.</p>
+              <p>Als alle teksten en afbeeldingen naar jou tevredenheid op de website staan, gaan wij hem binnen 2 uur online zetten.</p>
             </div>
           </div>
           <div class="border-area left-bottom"></div>
@@ -569,7 +572,7 @@ raindrops  -->
             <i class="ti-email text-white"></i>
           </div>
           <div class="contact-info">
-            <h5 class="text-white">ralf.v.eck@gmail.com</h5>
+            <h5 class="text-white">info@vaneckmedia.nl</h5>
             <span class="text-white">24 X 7 online support</span>
           </div>
         </div>
