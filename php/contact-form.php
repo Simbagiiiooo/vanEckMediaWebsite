@@ -2,7 +2,7 @@
 
 $name = $_POST["name"];
 $email = $_POST["email"];
-$subject = $_POST["subject"];
+$subject = $_POST["phone"];
 $message = $_POST["message"];
 
 require "vendor/autoload.php";
@@ -37,7 +37,7 @@ header("Location: sent.html");
 if(isset($_POST["action"])) {
 	$name = $_POST['name'];        // Sender's name
 	$email = $_POST['email'];      // Sender's email address
-	$phone  = $_POST['phone'];     // Sender's email address
+	$phone  = $_POST['phone'];     // Sender's phone number
 	$message = $_POST['message'];  // Sender's message
 	$headers = 'From: Contact Form <info@vaneckmedia.nl>' . "\r\n";
 
@@ -66,13 +66,13 @@ if(isset($_POST["action"])) {
 		$errmsg .= '<p>Please enter your message.</p>';
 	}
 
-	/* Check Google captch validation */
-	if( isset( $_POST['g-recaptcha-response'] ) ){
-		$error_message = validation_google_captcha( $_POST['g-recaptcha-response'] );
-		if($error_message!=''){
-			$errmsg .= $error_message;
-		}
-	}	
+	// /* Check Google captch validation */
+	// if( isset( $_POST['g-recaptcha-response'] ) ){
+	// 	$error_message = validation_google_captcha( $_POST['g-recaptcha-response'] );
+	// 	if($error_message!=''){
+	// 		$errmsg .= $error_message;
+	// 	}
+	// }	
 	
 	$result='';
 	// If there are no errors, send the email
