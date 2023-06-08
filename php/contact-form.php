@@ -1,107 +1,41 @@
 <?php
-if(isset($_POST["action"])) {
-	$name = $_POST['name'];        // Sender's name
-	$email = $_POST['email'];      // Sender's email address
-	$phone  = $_POST['phone'];     // Sender's email address
-	$message = $_POST['message'];  // Sender's message
-	$headers = 'From: Contact Form <info@vaneckmedia.nl>' . "\r\n";
 
-	$to = 'info@vaneckmedia.nl';     // Recipient's email address
-	$subject = 'Vraag van van Eck Media website '; // Message title
+$name = $_POST['name'];
+$email = $_POST['email'];
+$subject = $_POST['phone'];
+$message = $_POST['message'];
 
-	$body = " From: $name \n E-Mail: $email \n Phone : $phone \n Message : $message"  ;
-	
-	// init error message
-	$errmsg='';
-	// Check if name has been entered
-	if (isset($_POST['name']) && $_POST['name'] == '') {
-		$errmsg .= '<p>Please enter your name.</p>';
-	}
-	// Check if email has been entered and is valid
-	if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-		$errmsg .= '<p>Please enter a valid email address.</p>';
-	}
-	//Check if phone number has been entered
-	if ( isset($_POST['phone']) && $_POST['phone'] == '') {
-		$errmsg .= '<p>Please enter your phone number.</p>';
-	}
-	
-	//Check if message has been entered
-	if ( isset($_POST['message']) && $_POST['message'] == '') {
-		$errmsg .= '<p>Please enter your message.</p>';
-	}
+$mailheader = "From:".$name."<".$email.">\r\n";
 
-	// /* Check Google captch validation */
-	// if( isset( $_POST['g-recaptcha-response'] ) ){
-	// 	$error_message = validation_google_captcha( $_POST['g-recaptcha-response'] );
-	// 	if($error_message!=''){
-	// 		$errmsg .= $error_message;
-	// 	}
-	// }	
-	
-	$result='';
-	// If there are no errors, send the email
-	if (!$errmsg) {
-		if (mail ($to, $subject, $body, $headers)) {
-			$result='<div class="alert alert-success">Thank you for contacting us. Your message has been successfully sent. We will contact you very soon!</div>';
-		}
-		else {
-		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
-		}
-	}
-	else{
-		$result='<div class="alert alert-danger">'.$errmsg.'</div>';
-	}
-	echo $result;
-}
+$recipient = "info@vaneckmedia.nl";
 
-// /*
-//  * Validate google captch
-//  */
-// function validation_google_captcha( $captch_response){
+mail($recipient, $phone, $message, $mailheader) or die("Error!");
 
-// 	/* Replace google captcha secret key*/
-// 	$captch_secret_key = '6LdvXZciAAAAAChpQ7nQg9MdCe7QC64Ax_8jrET1';
-	
-// 	$data = array(
-//             'secret'   => $captch_secret_key,
-//             'response' => $captch_response,
-// 			'remoteip' => $_SERVER['REMOTE_ADDR']
-//         );
-// 	$verify = curl_init();
-// 	curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
-// 	curl_setopt($verify, CURLOPT_POST, true);
-// 	curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($data));
-// 	curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
-// 	curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
-// 	$response = curl_exec($verify);
-// 	$response = json_decode( $response, true );
-// 	$error_message='';
-// 	if( isset($response['error-codes']) && !empty($response['error-codes'])){
-// 		if( $response['error-codes'][0] == 'missing-input-secret' ){
-			
-// 			$error_message = '<p>The recaptcha secret parameter is missing.</p>';
-			
-// 		}elseif( $response['error-codes'][0] == 'invalid-input-secret' ){
-			
-// 			$error_message = '<p>The recaptcha secret parameter is invalid or malformed.</p>';
-			
-// 		}elseif( $response['error-codes'][0] == 'missing-input-response' ){
-			
-// 			$error_message = '<p>The recaptcha response parameter is missing.</p>';
-			
-// 		}elseif( $response['error-codes'][0] == 'invalid-input-response' ){
-			
-// 			$error_message = '<p>The recaptcha response parameter is invalid or malformed.</p>';
-			
-// 		}elseif( $response['error-codes'][0] == 'bad-request' ){
-			
-// 			$error_message = '<p>The recaptcha request is invalid or malformed.</p>';
-// 		}
-// 	}	
-// 	if( $error_message !=''){
-// 		return $error_message;
-// 	}else{
-// 		return '';
-// 	}
-//   }
+echo'
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thank you for contacting me. I will get back to you as soon as possible!</h1>
+        <p class="back">Go back to the <a href="index.html">homepage</a>.</p>
+        
+    </div>
+</body>
+</html>
+
+
+
+';
+
+
+?>
+
